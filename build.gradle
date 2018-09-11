@@ -4,6 +4,7 @@
  * This is a general purpose Gradle build.
  * Learn how to create Gradle builds at https://guides.gradle.org/creating-new-gradle-builds/
 */
+defaultTasks 'jar'
 apply plugin: 'java'
 repositories {
     mavenCentral()
@@ -11,7 +12,6 @@ repositories {
 }
 
 dependencies {
-    //classpath 'com.android.tools.build:gradle:3.1.4'
     compile files('lib/resources.jar')
 
 }
@@ -23,9 +23,13 @@ jar {
     manifest {
         attributes(
                 //'Class-Path': configurations.compile.collect { it.getName() }.join(' '),
-                'Main-Class': 'edu.gatech.oad.antlab.pkg1.AntLabMain'
+                'Main-Class': 'edu.gatech.oad.antlab.pkg1.AntLabMain',
+                'Class-Path': 'build/libs/M2.jar'
+                //back up two directories
         )
 
     }
 }
+
+
 
