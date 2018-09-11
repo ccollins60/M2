@@ -1,4 +1,4 @@
 Manifest-Version: 1.0
-Class-Path: M2/build/libs/M2.jar
+Class-Path: build/libs/M2.jar
 Main-Class: edu.gatech.oad.antlab.pkg1.AntLabMain
 
